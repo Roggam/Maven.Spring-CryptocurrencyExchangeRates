@@ -24,7 +24,7 @@ public class CryptoController {
     }
 
 
- @RequestMapping(value = "https://api.cryptonator.com/api/ticker/{base}-{target}", method = RequestMethod.GET)
+ @RequestMapping(value = "crypto/{base}-{target}", method = RequestMethod.GET)
 
     public ResponseEntity<Crypto> getCryptoInfo(@PathVariable String base, @PathVariable String target){
         return new ResponseEntity<>(cryptoService.add(base, target), HttpStatus.OK);
